@@ -2,13 +2,12 @@ create database db_escola;
 use db_escola;
 
 create table alunos(
-  id_aluno int  primary key auto_increment,
-  nome varchar(255) not null,
-  idade int not null,
-  curso varchar(255) not null,
-  semestre int,
-  nota decimal not null
-  
+	  id_aluno bigint  primary key auto_increment,
+	  nome varchar(255) not null,
+	  idade int(3) not null,
+	  curso varchar(255) not null,
+	  semestre int(2),
+	  nota decimal(10,2) not null  
 );
 
 insert into alunos(nome, idade, curso, semestre, nota) values('João', 27, 'Arquitetura', 4, 9);
@@ -28,6 +27,7 @@ select * from alunos
 where nota < 7;
 
 update alunos set semestre =  2
-where id_aluno = 3;
+where id_aluno = 8;
 
 select * from alunos;
+
